@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StepLab — Step Record Simulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="shell">
+  <header><div class="mark">✣</div><div><h1>StepLab</h1><p>Local step-record simulator</p></div></header>
+  <section class="notice"><strong>Demo mode</strong><span>Entries created here stay in this browser. They are not written to Health Connect or Google Fit.</span></section>
+  <section class="panel">
+    <h2>Create a sample record</h2>
+    <label for="count">Step count</label>
+    <input id="count" type="number" min="1" max="100000" value="5000">
+    <label for="date">Date</label>
+    <input id="date" type="date">
+    <div class="actions"><button id="add">Add demo record</button><button class="secondary" id="clear">Clear demo data</button></div>
+    <p id="status" role="status"></p>
+  </section>
+  <section class="panel">
+    <div class="section-head"><h2>Demo history</h2><span id="total">0 steps</span></div>
+    <div id="records" class="records"><p class="empty">No demo records yet.</p></div>
+  </section>
+  <footer>StepLab · Local-only testing tool</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
