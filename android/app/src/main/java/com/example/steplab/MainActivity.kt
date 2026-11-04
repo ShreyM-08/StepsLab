@@ -80,6 +80,7 @@ class MainActivity : ComponentActivity() {
 
     private fun checkHealthConnect() {
         val sdkStatus = HealthConnectClient.getSdkStatus(this)
+        status.text = "Button tapped! Checking Health Connect..."
 
         if (sdkStatus != HealthConnectClient.SDK_AVAILABLE) {
             status.text =
